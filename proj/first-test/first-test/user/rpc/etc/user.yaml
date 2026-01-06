@@ -4,3 +4,11 @@ Etcd:
   Hosts:
   - 127.0.0.1:2379
   Key: user.rpc
+
+Mysql:
+  DataSource: root:a12bCd3_W45pUq6@tcp(47.104.208.126:4082)/zero_test?charset=utf8mb4
+
+Cache:
+  - Host: 47.104.208.126:6380
+    Type: node
+    Pass:

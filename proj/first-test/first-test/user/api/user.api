@@ -1,0 +1,27 @@
+syntax = "v1"
+
+info (
+	title: "用户服务api"
+	desc:  "用户服务api的描述（这是一个用户服务的api）"
+)
+
+// 定义几个结构体来方便后续的操作
+type (
+	UserReq {
+		Id string `json:"id"`
+	}
+	UserResp {
+		Id    string `json:"id"`
+		Name  string `json:"name"`
+		Phone string `json:"phone"`
+	}
+)
+
+// 货真价实的定义在这里
+service User {
+	// handler 这里是选择调用的方法（定义在 logic 中）
+	// /user 是访问路径
+	@handler user
+	get /user (UserReq) returns (UserResp)
+}
+
